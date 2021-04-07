@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="weather_conditions">Weather Conditions</string>
+    <string name="location">location</string>
+    <string name="temp">Temp</string>
+    <string name="feels_like">Feels like</string>
+    <string name="min_temp">min temp</string>
+    <string name="max_temp">max temp</string>
+    <string name="pressure">pressure</string>
+    <string name="humidity">humidity</string>
+    <string name="_7_day_forecast">7 day forecast</string>
+    <string name="precipitation">precipitation</string>
+    <string name="wind_speed">Wind Speed</string>
+</resources>
