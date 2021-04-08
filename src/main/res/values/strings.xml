@@ -11,4 +11,5 @@
     <string name="_7_day_forecast">7 day forecast</string>
     <string name="precipitation">precipitation</string>
     <string name="wind_speed">Wind Speed</string>
+    <string name="current_day">Current Day</string>
 </resources>

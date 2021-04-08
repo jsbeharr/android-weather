@@ -3,16 +3,16 @@ package com.cis436projects.weather
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cis436projects.weather.ui.main.MainFragment
+import android.net.Uri
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SevenForecastFragment.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow()
-        }
     }
+
+    override fun onFragmentInteraction(uri: Uri) {
+    }
+
 }
