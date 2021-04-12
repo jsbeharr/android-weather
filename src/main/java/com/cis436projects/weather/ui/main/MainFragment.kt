@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cis436projects.weather.R
 import androidx.navigation.Navigation
+import com.cis436projects.weather.WeatherData
 import com.cis436projects.weather.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
@@ -25,6 +26,12 @@ class MainFragment : Fragment() {
                               savedInstanceState: Bundle?): View {
         _binding = MainFragmentBinding.inflate(inflater, container, false)
         return  binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val weatherData = WeatherData()
+        weatherData.getCurrentWeatherData()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

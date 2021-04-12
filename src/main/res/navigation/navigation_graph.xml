@@ -20,7 +20,7 @@
         android:label="seven_forecast_fragment"
         tools:layout="@layout/seven_forecast_fragment" >
         <action
-            android:id="@+id/action_sevenForecastFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_sevenForecastFragment_to_mainFragment2"
+            app:popUpTo="@id/mainFragment" />
     </fragment>
 </navigation>

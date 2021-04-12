@@ -2,8 +2,8 @@ package com.cis436projects.weather
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.cis436projects.weather.ui.main.MainFragment
 import android.net.Uri
+
 
 class MainActivity : AppCompatActivity(), SevenForecastFragment.OnFragmentInteractionListener {
 

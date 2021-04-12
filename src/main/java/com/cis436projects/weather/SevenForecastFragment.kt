@@ -38,9 +38,7 @@ class SevenForecastFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(SevenForecastViewModel::class.java)
 
         binding.currentDayButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(
-                R.id.action_sevenForecastFragment_to_mainFragment
-            )
+            Navigation.findNavController(it).popBackStack()
         }
     }
 
