@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WeatherApp</string>
     <string name="weather_conditions">Weather Conditions</string>
-    <string name="location">location</string>
+    <string name="location">Livonia, Michigan</string>
     <string name="temp">Temp</string>
     <string name="feels_like">Feels like</string>
     <string name="min_temp">min temp</string>
@@ -12,4 +12,6 @@
     <string name="precipitation">precipitation</string>
     <string name="wind_speed">Wind Speed</string>
     <string name="current_day">Current Day</string>
+    <string name="sun_rise">sun rise</string>
+    <string name="sun_set">sun set</string>
 </resources>

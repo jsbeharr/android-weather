@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.cis436projects.weather.ui.main.MainViewModel" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/temp"
+        android:text="@{mainViewModel.temperature}"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,31 +39,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/feels_like"
+        android:text="@{mainViewModel.feelsLikeTemperature}"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
 
     <TextView
-        android:id="@+id/minTempTextView"
+        android:id="@+id/sunriseTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/min_temp"
-        app:layout_constraintEnd_toStartOf="@+id/minTempTextView2"
+        android:text="@{mainViewModel.sunriseTime}"
+        app:layout_constraintEnd_toStartOf="@+id/sunsetTextView"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feelTempTextView" />
 
     <TextView
-        android:id="@+id/minTempTextView2"
+        android:id="@+id/sunsetTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/max_temp"
+        android:text="@{mainViewModel.sunsetTime}"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/minTempTextView"
+        app:layout_constraintStart_toEndOf="@+id/sunriseTextView"
         app:layout_constraintTop_toBottomOf="@+id/feelTempTextView" />
 
     <TextView
@@ -65,17 +71,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/weather_conditions"
+        android:text="@{mainViewModel.weatherConditions}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minTempTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/sunriseTextView" />
 
     <TextView
         android:id="@+id/precipitationTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/precipitation"
+        android:text="@{mainViewModel.precipitation}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weatherConditionsTextView" />
@@ -85,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/wind_speed"
+        android:text="@{mainViewModel.windSpeed}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/precipitationTextView" />
@@ -95,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/pressure"
+        android:text="@{mainViewModel.pressure}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/windSpeedTextView" />
@@ -105,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/humidity"
+        android:text="@{mainViewModel.humidity}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pressureTextView" />
@@ -120,4 +126,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
