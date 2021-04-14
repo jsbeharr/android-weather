@@ -18,9 +18,7 @@ import java.lang.Exception
 
 class MainFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = MainFragment()
-    }
+    companion object;
 
     private lateinit var viewModel: MainViewModel
     // view binding
